@@ -442,32 +442,6 @@
       }
     });
 
-    /* ---- Floating image on industry rows (desktop fine pointer only) ---- */
-    if (fine) {
-      const fl = $('#indFloat');
-      const list = $('#indList');
-      if (fl && list) {
-        const fx = gsap.quickTo(fl, 'x', { duration: .6, ease: 'power3' });
-        const fy = gsap.quickTo(fl, 'y', { duration: .6, ease: 'power3' });
-        list.addEventListener('pointermove', e => { fx(e.clientX); fy(e.clientY); });
-        $$('.ind__row').forEach(r => r.addEventListener('pointerenter', () => {
-          if (innerWidth < 900) return;
-          const src = $('img', r);
-          if (!src) return;
-          const im = document.createElement('img');
-          im.src = src.currentSrc || src.src;
-          im.dataset.cdn = src.dataset.cdn;
-          im.alt = '';
-          fl.appendChild(im);
-          gsap.fromTo(im, { clipPath: 'inset(100% 0 0 0)', scale: 1.3 }, { clipPath: 'inset(0% 0 0 0)', scale: 1, duration: .7, ease: 'expo.out' });
-          while (fl.children.length > 3) fl.firstChild.remove();
-          gsap.to(fl, { opacity: 1, scale: 1, rotation: gsap.utils.random(-6, 6), duration: .6, ease: 'expo.out' });
-        }));
-        list.addEventListener('pointerleave', () => gsap.to(fl, { opacity: 0, scale: .6, duration: .5, ease: 'expo.out' }));
-        ScrollTrigger.create({ trigger: '#industries', start: 'top bottom', once: true, onEnter: () => $$('.ind__thumb img').forEach(i => { i.loading = 'eager'; }) });
-      }
-    }
-
     addEventListener('load', () => ScrollTrigger.refresh());
   }
 
