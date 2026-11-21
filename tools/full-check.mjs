@@ -27,6 +27,12 @@ console.log('"Not selling phone numbers" count:', notSelling.length);
 const correctPhone = html.match(/70195\s*76635/gi) || [];
 console.log('Correct phone (+91 70195 76635) count in HTML:', correctPhone.length);
 
+const officialEmail = (html + readme).match(/connect@leadbasepro\.online/gi) || [];
+console.log('Official email (connect@leadbasepro.online) count:', officialEmail.length);
+
+const dummyEmails = (html + css + js + readme).match(/[a-zA-Z0-9._%+-]+@(?!leadbasepro\.online)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/gi) || [];
+console.log('Dummy / unauthorized emails count:', dummyEmails.length);
+
 console.log('\n================ 2. IMAGE INTEGRITY ================');
 const imgRegex = /(?:src|srcset)=["']([^"']+)["']/g;
 let m;
@@ -69,6 +75,8 @@ const allPassed = (
   floatImg.length === 0 &&
   notSelling.length === 0 &&
   missing.length === 0 &&
+  officialEmail.length >= 4 &&
+  dummyEmails.length === 0 &&
   footerWord &&
   heroTitleMobile &&
   colorSchemeLight &&
