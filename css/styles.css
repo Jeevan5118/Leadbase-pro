@@ -364,12 +364,12 @@ picture { display: contents; }
   display: grid;
   grid-template-columns: 0.88fr 1.12fr;
   gap: clamp(40px, 5vw, 90px);
-  align-items: start;
+  align-items: stretch;
 }
 .process__media {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
+  align-self: stretch;
+  height: 100%;
 }
 .process__frame {
   position: sticky;
@@ -428,6 +428,9 @@ picture { display: contents; }
   gap: 6px 20px;
   opacity: .35;
   transition: opacity .5s var(--out);
+}
+.pstep:last-child {
+  padding-bottom: clamp(120px, 18vh, 220px);
 }
 .pstep.is-on, .no-anim .pstep { opacity: 1; }
 .pstep span { grid-row: span 2; font-family: var(--display); font-weight: 600; color: var(--signal); font-size: 15px; padding-top: 10px; }

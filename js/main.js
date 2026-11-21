@@ -136,6 +136,7 @@
     const enableLenis = window.Lenis && matchMedia('(min-width: 900px) and (pointer: fine)').matches;
     if (enableLenis) {
       lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+      window.__lenis = lenis;
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add(t => lenis.raf(t * 1000));
       gsap.ticker.lagSmoothing(0);
