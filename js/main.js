@@ -318,21 +318,35 @@
 
     /* ---- Process: image swaps on desktop (>= 900px) ---- */
     mm.add('(min-width: 900px)', () => {
-      const imgs = $$('.pimg'), num = $('#stepNum');
-      $$('.pstep').forEach((s, i) => {
+      const imgs = $$('.pimg'), steps = $$('.pstep'), num = $('#stepNum');
+
+      const activate = (idx) => {
+        steps.forEach((x, k) => x.classList.toggle('is-on', k === idx));
+        imgs.forEach((im, k) => {
+          im.classList.toggle('is-on', k === idx);
+        });
+        if (num) num.textContent = String(idx + 1).padStart(2, '0');
+      };
+
+      steps.forEach((s, i) => {
         ScrollTrigger.create({
           trigger: s,
-          start: 'top 62%',
-          end: 'bottom 62%',
-          onToggle: self => {
-            if (!self.isActive) return;
-            $$('.pstep').forEach(x => x.classList.toggle('is-on', x === s));
-            imgs.forEach((im, k) => { im.classList.toggle('is-on', k <= i); im.style.zIndex = k; });
-            if (num) num.textContent = String(i + 1).padStart(2, '0');
-          }
+          start: 'top center',
+          end: 'bottom center',
+          onEnter: () => activate(i),
+          onEnterBack: () => activate(i)
         });
       });
-      if ($$('.pstep')[0]) $$('.pstep')[0].classList.add('is-on');
+
+      // Default to first step
+      activate(0);
+
+      // Reset to step 0 if scrolled back up above process section
+      ScrollTrigger.create({
+        trigger: '#process',
+        start: 'top 85%',
+        onEnterBack: () => activate(0)
+      });
     });
     mm.add('(max-width: 899px)', () => {
       $$('.pstep__media').forEach(fig => {
