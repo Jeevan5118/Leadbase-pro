@@ -84,6 +84,20 @@
     const loader = $('#loader');
     const finish = () => { if (loader) loader.remove(); };
 
+    // Set initial animated states immediately before revealing body to prevent FOUC / glitch
+    if (hasGSAP && !reduce) {
+      gsap.set('.hero__title .ch', { yPercent: 110, rotateX: -65, opacity: 0 });
+      gsap.set('.hero__lede, .hero__actions, .hero__scroll, .header > *', { y: 24, opacity: 0 });
+      const cards = $$('.deck__card');
+      const rest = [
+        { x: 0, y: 0, z: 0, rotationY: -16, rotationX: 6, rotationZ: -2 },
+        { x: -150, y: 60, z: -160, rotationY: -22, rotationX: 8, rotationZ: -8 },
+        { x: 60, y: 150, z: -280, rotationY: -10, rotationX: 10, rotationZ: 6 },
+        { x: -260, y: -60, z: -420, rotationY: -26, rotationX: 4, rotationZ: -12 }
+      ];
+      cards.forEach((c, i) => gsap.set(c, { ...rest[i], zIndex: 10 - i, opacity: 0, yPercent: 120, rotationX: 40 }));
+    }
+
     // Smoothly kick off hero reveal right as the loader opens
     document.body.classList.remove('is-loading');
     start();
@@ -125,14 +139,12 @@
 
     const mm = gsap.matchMedia();
 
-    /* ---- Hero intro: 3D letters rise ---- */
-    gsap.fromTo('.hero__title .ch',
-      { yPercent: 110, rotateX: -65, opacity: 0 },
-      { yPercent: 0, rotateX: 0, opacity: 1, transformOrigin: '50% 100%', stagger: 0.015, duration: 1.1, ease: 'power3.out', delay: 0.1 }
+    /* ---- Hero intro: 3D letters rise (zero FOUC glitch) ---- */
+    gsap.to('.hero__title .ch',
+      { yPercent: 0, rotateX: 0, opacity: 1, transformOrigin: '50% 100%', stagger: 0.015, duration: 1.1, ease: 'power3.out' }
     );
-    gsap.fromTo('.hero__lede, .hero__actions, .hero__scroll, .header > *',
-      { y: 24, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.06, duration: 0.9, ease: 'power3.out', delay: 0.3 }
+    gsap.to('.hero__lede, .hero__actions, .hero__scroll, .header > *',
+      { y: 0, opacity: 1, stagger: 0.06, duration: 0.9, ease: 'power3.out', delay: 0.15 }
     );
 
     /* ---- Hero 3D deck ---- */
@@ -146,10 +158,8 @@
 
     /* ---- Desktop (>= 1200px) ---- */
     mm.add('(min-width: 1200px)', () => {
-      cards.forEach((c, i) => gsap.set(c, { ...rest[i], zIndex: 10 - i }));
-      gsap.fromTo(cards,
-        { yPercent: 120, rotationX: 40, opacity: 0 },
-        { yPercent: 0, rotationX: (i) => rest[i].rotationX, opacity: 1, stagger: { each: 0.1, from: 'end' }, duration: 1.4, ease: 'power3.out', delay: 0.15 }
+      gsap.to(cards,
+        { yPercent: 0, rotationX: (i) => rest[i].rotationX, opacity: 1, stagger: { each: 0.1, from: 'end' }, duration: 1.4, ease: 'power3.out', delay: 0.1 }
       );
 
       // Scroll: deck explodes towards viewer
