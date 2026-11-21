@@ -2,3 +2,8 @@
 Thumbs.db
 Desktop.ini
 *.tmp
+.env
+assets/img/_masters/
+tools/node_modules/
+tools/node/
+tools/bin/

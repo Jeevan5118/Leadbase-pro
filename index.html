@@ -8,10 +8,17 @@
   <title>Lead Base Pro — B2B lead databases, built for the businesses you sell to</title>
   <meta name="description" content="Lead Base Pro builds ready-to-use B2B lead databases — business name, phone, address, website and category — for teams that sell to hotels and hundreds of other industries. One-time packages from ₹3,750. Halasuru, Bengaluru." />
   <meta name="theme-color" content="#0C0E12" />
+  <meta property="og:title" content="Lead Base Pro — B2B lead databases, built for the businesses you sell to" />
+  <meta property="og:description" content="Lead Base Pro builds ready-to-use B2B lead databases — business name, phone, address, website and category — for teams that sell to hotels and hundreds of other industries. One-time packages from ₹3,750. Halasuru, Bengaluru." />
+  <meta property="og:image" content="https://leadbasepro.online/assets/img/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://leadbasepro.online/assets/img/og-image.jpg" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Fraunces:ital,opsz,wght@1,9..144,300..500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-deal-handshake-480.avif 480w, assets/img/hero-deal-handshake-800.avif 800w, assets/img/hero-deal-handshake-1200.avif 1200w, assets/img/hero-deal-handshake-1800.avif 1800w" imagesizes="(max-width: 999px) 66vw, 22vw" fetchpriority="high" />
   <link rel="stylesheet" href="css/styles.css" />
   <script>
     /* If a local photo is missing (assets not downloaded yet), load the same photo from the Unsplash CDN */
@@ -49,9 +56,6 @@
       <div class="loader__ticker" id="lTicker"><span>hotels</span><span>resorts</span><span>restaurants</span><span>distributors</span><span>hospitals</span><span>developers</span></div>
     </div>
   </div>
-
-  <!-- ================= CURSOR ================= -->
-  <div class="cursor" id="cursor" aria-hidden="true"><span>View</span></div>
 
   <!-- ================= HEADER ================= -->
   <header class="header" id="header">
@@ -100,10 +104,38 @@
       <!-- 3D deck of real photos -->
       <div class="deck" id="deck" aria-hidden="true">
         <div class="deck__stage" id="deckStage">
-          <div class="deck__card" data-i="0"><img src="assets/img/hero-resort.jpg" data-cdn="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=75" alt="Resort hotel with pool" width="1000" height="1250" decoding="async" fetchpriority="high" /><span class="deck__tag">Resorts</span></div>
-          <div class="deck__card" data-i="1"><img src="assets/img/hero-hotel.jpg" data-cdn="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=75" alt="Hotel exterior at dusk" width="1000" height="1250" decoding="async" /><span class="deck__tag">Hotels</span></div>
-          <div class="deck__card" data-i="2"><img src="assets/img/hero-restaurant.jpg" data-cdn="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=75" alt="Restaurant interior" width="1000" height="1250" decoding="async" /><span class="deck__tag">Restaurants</span></div>
-          <div class="deck__card" data-i="3"><img src="assets/img/hero-lobby.jpg" data-cdn="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=75" alt="Hotel reception lobby" width="1000" height="1250" decoding="async" /><span class="deck__tag">Boutique hotels</span></div>
+          <div class="deck__card" data-i="0">
+            <picture>
+              <source type="image/avif" srcset="assets/img/hero-deal-handshake-480.avif 480w, assets/img/hero-deal-handshake-800.avif 800w, assets/img/hero-deal-handshake-1200.avif 1200w, assets/img/hero-deal-handshake-1800.avif 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <source type="image/webp" srcset="assets/img/hero-deal-handshake-480.webp 480w, assets/img/hero-deal-handshake-800.webp 800w, assets/img/hero-deal-handshake-1200.webp 1200w, assets/img/hero-deal-handshake-1800.webp 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <img src="assets/img/hero-deal-handshake.jpg" alt="Two Indian business founders shaking hands across a conference table in a modern Bengaluru high-rise" width="1000" height="1250" decoding="async" fetchpriority="high" />
+            </picture>
+            <span class="deck__tag">Deal closed</span>
+          </div>
+          <div class="deck__card" data-i="1">
+            <picture>
+              <source type="image/avif" srcset="assets/img/hero-contract-signing-480.avif 480w, assets/img/hero-contract-signing-800.avif 800w, assets/img/hero-contract-signing-1200.avif 1200w, assets/img/hero-contract-signing-1800.avif 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <source type="image/webp" srcset="assets/img/hero-contract-signing-480.webp 480w, assets/img/hero-contract-signing-800.webp 800w, assets/img/hero-contract-signing-1200.webp 1200w, assets/img/hero-contract-signing-1800.webp 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <img src="assets/img/hero-contract-signing.jpg" alt="Indian enterprise executive signing a procurement agreement with fountain pen" width="1000" height="1250" decoding="async" />
+            </picture>
+            <span class="deck__tag">Contracts signed</span>
+          </div>
+          <div class="deck__card" data-i="2">
+            <picture>
+              <source type="image/avif" srcset="assets/img/hero-sales-win-480.avif 480w, assets/img/hero-sales-win-800.avif 800w, assets/img/hero-sales-win-1200.avif 1200w, assets/img/hero-sales-win-1800.avif 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <source type="image/webp" srcset="assets/img/hero-sales-win-480.webp 480w, assets/img/hero-sales-win-800.webp 800w, assets/img/hero-sales-win-1200.webp 1200w, assets/img/hero-sales-win-1800.webp 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <img src="assets/img/hero-sales-win.jpg" alt="Diverse Bengaluru inside-sales team celebrating a quarterly target win" width="1000" height="1250" decoding="async" />
+            </picture>
+            <span class="deck__tag">Sales teams</span>
+          </div>
+          <div class="deck__card" data-i="3">
+            <picture>
+              <source type="image/avif" srcset="assets/img/hero-hospitality-supplier-480.avif 480w, assets/img/hero-hospitality-supplier-800.avif 800w, assets/img/hero-hospitality-supplier-1200.avif 1200w, assets/img/hero-hospitality-supplier-1800.avif 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <source type="image/webp" srcset="assets/img/hero-hospitality-supplier-480.webp 480w, assets/img/hero-hospitality-supplier-800.webp 800w, assets/img/hero-hospitality-supplier-1200.webp 1200w, assets/img/hero-hospitality-supplier-1800.webp 1800w" sizes="(max-width: 999px) 66vw, 22vw" />
+              <img src="assets/img/hero-hospitality-supplier.jpg" alt="Commercial supplier presenting luxury linen swatches to boutique hotel general manager" width="1000" height="1250" decoding="async" />
+            </picture>
+            <span class="deck__tag">Hotels &amp; restaurants</span>
+          </div>
         </div>
       </div>
       <div class="hero__scroll"><span>Scroll</span><i></i></div>
@@ -114,7 +146,13 @@
       <div class="wrap statement__grid">
         <p class="label">01 — Why Lead Base Pro</p>
         <p class="statement__text fill-text">We're not selling phone numbers. We build a structured database of businesses that are ready to buy from you — so your team spends the day pitching and converting, not researching.</p>
-        <figure class="statement__photo clip-reveal"><img src="assets/img/intro-team.jpg" data-cdn="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=75" alt="Sales team working together" width="1200" height="900" loading="lazy" decoding="async" /></figure>
+        <figure class="statement__photo clip-reveal">
+          <picture>
+            <source type="image/avif" srcset="assets/img/intro-sales-floor-480.avif 480w, assets/img/intro-sales-floor-800.avif 800w, assets/img/intro-sales-floor-1200.avif 1200w, assets/img/intro-sales-floor-1800.avif 1800w" sizes="(max-width: 999px) 100vw, 50vw" />
+            <source type="image/webp" srcset="assets/img/intro-sales-floor-480.webp 480w, assets/img/intro-sales-floor-800.webp 800w, assets/img/intro-sales-floor-1200.webp 1200w, assets/img/intro-sales-floor-1800.webp 1800w" sizes="(max-width: 999px) 100vw, 50vw" />
+            <img src="assets/img/intro-sales-floor.jpg" alt="Active B2B inside-sales floor in Bengaluru with sales reps calling prospects" width="1200" height="900" loading="lazy" decoding="async" />
+          </picture>
+        </figure>
         <div class="statement__facts">
           <div><b class="count" data-to="3750" data-prefix="₹">0</b><span>entry package, one-time</span></div>
           <div><b class="count" data-to="3000">0</b><span>genuine leads minimum, even on the starter pack</span></div>
@@ -136,7 +174,13 @@
         </div>
         <div class="records__track" id="recTrack">
           <article class="rec">
-            <figure><img src="assets/img/rec-name.jpg" data-cdn="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=75" alt="Hotel building facade" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
+            <figure>
+              <picture>
+                <source type="image/avif" srcset="assets/img/rec-business-name-480.avif 480w, assets/img/rec-business-name-800.avif 800w, assets/img/rec-business-name-1200.avif 1200w, assets/img/rec-business-name-1800.avif 1800w" sizes="(max-width: 679px) 82vw, 380px" />
+                <source type="image/webp" srcset="assets/img/rec-business-name-480.webp 480w, assets/img/rec-business-name-800.webp 800w, assets/img/rec-business-name-1200.webp 1200w, assets/img/rec-business-name-1800.webp 1800w" sizes="(max-width: 679px) 82vw, 380px" />
+                <img src="assets/img/rec-business-name.jpg" alt="Commercial high-street storefronts in Indiranagar Bengaluru at golden hour" width="1000" height="1333" loading="lazy" decoding="async" />
+              </picture>
+            </figure>
             <div class="rec__body"><span class="rec__n">01</span><h3>Business name</h3><p>The hotel or business exactly as it trades, so your caller opens with confidence.</p></div>
           </article>
           <article class="rec">
@@ -172,7 +216,14 @@
         </div>
         <div class="flip__stage">
           <div class="flip__card" id="flipCard">
-            <div class="flip__face flip__front"><img src="assets/img/flip-hotel.jpg" data-cdn="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=75" alt="Hotel corridor" width="1200" height="1500" loading="lazy" decoding="async" /><span class="flip__hint">A hotel in Bengaluru</span></div>
+            <div class="flip__face flip__front">
+              <picture>
+                <source type="image/avif" srcset="assets/img/flip-business-exterior-480.avif 480w, assets/img/flip-business-exterior-800.avif 800w, assets/img/flip-business-exterior-1200.avif 1200w, assets/img/flip-business-exterior-1800.avif 1800w" sizes="(max-width: 679px) 86vw, 470px" />
+                <source type="image/webp" srcset="assets/img/flip-business-exterior-480.webp 480w, assets/img/flip-business-exterior-800.webp 800w, assets/img/flip-business-exterior-1200.webp 1200w, assets/img/flip-business-exterior-1800.webp 1800w" sizes="(max-width: 679px) 86vw, 470px" />
+                <img src="assets/img/flip-business-exterior.jpg" alt="Contemporary 4-star boutique hotel exterior entrance in Indiranagar Bengaluru at blue hour" width="1200" height="1500" loading="lazy" decoding="async" />
+              </picture>
+              <span class="flip__hint">A hotel in Bengaluru</span>
+            </div>
             <div class="flip__face flip__back">
               <p class="flip__eyebrow">Sample record · illustrative</p>
               <dl>
@@ -194,7 +245,13 @@
       <div class="wrap process__grid">
         <div class="process__media">
           <div class="process__frame">
-            <figure class="pimg is-on" data-step="0"><img src="assets/img/step-product.jpg" data-cdn="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=75" alt="Commercial kitchen" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            <figure class="pimg is-on" data-step="0">
+              <picture>
+                <source type="image/avif" srcset="assets/img/step-tell-us-480.avif 480w, assets/img/step-tell-us-800.avif 800w, assets/img/step-tell-us-1200.avif 1200w, assets/img/step-tell-us-1800.avif 1800w" sizes="50vw" />
+                <source type="image/webp" srcset="assets/img/step-tell-us-480.webp 480w, assets/img/step-tell-us-800.webp 800w, assets/img/step-tell-us-1200.webp 1200w, assets/img/step-tell-us-1800.webp 1800w" sizes="50vw" />
+                <img src="assets/img/step-tell-us.jpg" alt="B2B product specialist reviewing sample swatches and catalog items with client" width="1100" height="733" loading="lazy" decoding="async" />
+              </picture>
+            </figure>
             <figure class="pimg" data-step="1"><img src="assets/img/step-market.jpg" data-cdn="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1100&q=75" alt="City at night" width="1100" height="733" loading="lazy" decoding="async" /></figure>
             <figure class="pimg" data-step="2"><img src="assets/img/step-collect.jpg" data-cdn="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=75" alt="Server room" width="1100" height="733" loading="lazy" decoding="async" /></figure>
             <figure class="pimg" data-step="3"><img src="assets/img/step-sell.jpg" data-cdn="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1100&q=75" alt="Business handshake" width="1100" height="733" loading="lazy" decoding="async" /></figure>
@@ -209,7 +266,13 @@
             <div class="pstep__body">
               <h3>Tell us what you sell</h3>
               <p>Linen, kitchen equipment, toiletries, furniture, software — we start with your product and work out exactly who buys it.</p>
-              <figure class="pstep__media"><img src="assets/img/step-product.jpg" data-cdn="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=75" alt="Commercial kitchen" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+              <figure class="pstep__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/step-tell-us-480.avif 480w, assets/img/step-tell-us-800.avif 800w, assets/img/step-tell-us-1200.avif 1200w, assets/img/step-tell-us-1800.avif 1800w" sizes="100vw" />
+                  <source type="image/webp" srcset="assets/img/step-tell-us-480.webp 480w, assets/img/step-tell-us-800.webp 800w, assets/img/step-tell-us-1200.webp 1200w, assets/img/step-tell-us-1800.webp 1800w" sizes="100vw" />
+                  <img src="assets/img/step-tell-us.jpg" alt="B2B product specialist reviewing sample swatches and catalog items with client" width="1100" height="733" loading="lazy" decoding="async" />
+                </picture>
+              </figure>
             </div>
           </article>
           <article class="pstep" data-step="1">
@@ -323,9 +386,30 @@
           <p>The same service works for hundreds of industries. Tell us who your buyers are — manufacturers, distributors, wholesalers, IT companies, schools and colleges, hospitals or real estate — and we'll build the list.</p>
         </div>
         <div class="gallery">
-          <figure class="g g1" data-speed="-8"><img src="assets/img/bey-warehouse.jpg" data-cdn="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=75" alt="Distribution warehouse" width="800" height="1000" loading="lazy" decoding="async" /><figcaption>Distributors</figcaption></figure>
-          <figure class="g g2" data-speed="10"><img src="assets/img/bey-hospital.jpg" data-cdn="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=75" alt="Hospital corridor" width="800" height="800" loading="lazy" decoding="async" /><figcaption>Hospitals</figcaption></figure>
-          <figure class="g g3" data-speed="-4"><img src="assets/img/bey-realestate.jpg" data-cdn="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=75" alt="Modern property" width="800" height="1000" loading="lazy" decoding="async" /><figcaption>Real estate</figcaption></figure>
+          <figure class="g g1" data-speed="-8">
+            <picture>
+              <source type="image/avif" srcset="assets/img/bey-distributors-480.avif 480w, assets/img/bey-distributors-800.avif 800w, assets/img/bey-distributors-1200.avif 1200w, assets/img/bey-distributors-1800.avif 1800w" sizes="40vw" />
+              <source type="image/webp" srcset="assets/img/bey-distributors-480.webp 480w, assets/img/bey-distributors-800.webp 800w, assets/img/bey-distributors-1200.webp 1200w, assets/img/bey-distributors-1800.webp 1800w" sizes="40vw" />
+              <img src="assets/img/bey-distributors.jpg" alt="Modern logistics distribution warehouse manager in Bengaluru holding digital tablet" width="800" height="1000" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption>Distributors</figcaption>
+          </figure>
+          <figure class="g g2" data-speed="10">
+            <picture>
+              <source type="image/avif" srcset="assets/img/bey-hospitals-480.avif 480w, assets/img/bey-hospitals-800.avif 800w, assets/img/bey-hospitals-1200.avif 1200w, assets/img/bey-hospitals-1800.avif 1800w" sizes="40vw" />
+              <source type="image/webp" srcset="assets/img/bey-hospitals-480.webp 480w, assets/img/bey-hospitals-800.webp 800w, assets/img/bey-hospitals-1200.webp 1200w, assets/img/bey-hospitals-1800.webp 1800w" sizes="40vw" />
+              <img src="assets/img/bey-hospitals.jpg" alt="Hospital procurement director reviewing medical supply manifests in modern medical center" width="800" height="800" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption>Hospitals</figcaption>
+          </figure>
+          <figure class="g g3" data-speed="-4">
+            <picture>
+              <source type="image/avif" srcset="assets/img/bey-real-estate-480.avif 480w, assets/img/bey-real-estate-800.avif 800w, assets/img/bey-real-estate-1200.avif 1200w, assets/img/bey-real-estate-1800.avif 1800w" sizes="40vw" />
+              <source type="image/webp" srcset="assets/img/bey-real-estate-480.webp 480w, assets/img/bey-real-estate-800.webp 800w, assets/img/bey-real-estate-1200.webp 1200w, assets/img/bey-real-estate-1800.webp 1800w" sizes="40vw" />
+              <img src="assets/img/bey-real-estate.jpg" alt="Commercial real estate developers examining architectural scale model in Bengaluru office" width="800" height="1000" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption>Real estate</figcaption>
+          </figure>
           <figure class="g g4" data-speed="14"><img src="assets/img/bey-factory.jpg" data-cdn="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=75" alt="Engineer in a factory" width="800" height="600" loading="lazy" decoding="async" /><figcaption>Manufacturers</figcaption></figure>
           <figure class="g g5" data-speed="-12"><img src="assets/img/bey-office.jpg" data-cdn="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=75" alt="Modern office" width="800" height="800" loading="lazy" decoding="async" /><figcaption>IT companies</figcaption></figure>
         </div>

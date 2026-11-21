@@ -89,13 +89,17 @@
       gsap.set('.hero__title .ch', { yPercent: 110, rotateX: -65, opacity: 0 });
       gsap.set('.hero__lede, .hero__actions, .hero__scroll, .header > *', { y: 24, opacity: 0 });
       const cards = $$('.deck__card');
-      const rest = [
-        { x: 0, y: 0, z: 0, rotationY: -16, rotationX: 6, rotationZ: -2 },
-        { x: -150, y: 60, z: -160, rotationY: -22, rotationX: 8, rotationZ: -8 },
-        { x: 60, y: 150, z: -280, rotationY: -10, rotationX: 10, rotationZ: 6 },
-        { x: -260, y: -60, z: -420, rotationY: -26, rotationX: 4, rotationZ: -12 }
-      ];
-      cards.forEach((c, i) => gsap.set(c, { ...rest[i], zIndex: 10 - i, opacity: 0, yPercent: 120, rotationX: 40 }));
+      if (innerWidth >= 1200) {
+        const rest = [
+          { x: 0, y: 0, z: 0, rotationY: -16, rotationX: 6, rotationZ: -2 },
+          { x: -150, y: 60, z: -160, rotationY: -22, rotationX: 8, rotationZ: -8 },
+          { x: 60, y: 150, z: -280, rotationY: -10, rotationX: 10, rotationZ: 6 },
+          { x: -260, y: -60, z: -420, rotationY: -26, rotationX: 4, rotationZ: -12 }
+        ];
+        cards.forEach((c, i) => gsap.set(c, { ...rest[i], zIndex: 10 - i, opacity: 0, yPercent: 120, rotationX: 40 }));
+      } else {
+        cards.forEach((c, i) => gsap.set(c, { zIndex: 10 - i, opacity: 0, y: 30, clearProps: 'x,z,rotationX,rotationY,rotationZ' }));
+      }
     }
 
     // Smoothly kick off hero reveal right as the loader opens
@@ -575,23 +579,6 @@
     if (yr) yr.textContent = new Date().getFullYear();
 
     if (!fine || reduce) return;
-
-    // Custom cursor (desktop fine pointer only)
-    const cur = $('#cursor');
-    if (cur && window.gsap) {
-      const cx = gsap.quickTo(cur, 'x', { duration: .25, ease: 'power3' });
-      const cy = gsap.quickTo(cur, 'y', { duration: .25, ease: 'power3' });
-      addEventListener('pointermove', e => { cx(e.clientX); cy(e.clientY); });
-
-      $$('.rec, .deck__card, .g, .flip__card, .statement__photo').forEach(el => {
-        el.addEventListener('pointerenter', () => cur.classList.add('is-view'));
-        el.addEventListener('pointerleave', () => cur.classList.remove('is-view'));
-      });
-      $$('a, button, summary, select, input').forEach(el => {
-        el.addEventListener('pointerenter', () => cur.classList.add('is-link'));
-        el.addEventListener('pointerleave', () => cur.classList.remove('is-link'));
-      });
-    }
 
     // Magnetic buttons (desktop fine pointer only)
     $$('[data-magnetic]').forEach(b => {

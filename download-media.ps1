@@ -40,4 +40,5 @@ Get-Media 'assets\img\bey-realestate.jpg' 'https://images.unsplash.com/photo-156
 Get-Media 'assets\img\bey-factory.jpg' 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fm=jpg&fit=crop&w=800&q=75'
 Get-Media 'assets\img\bey-office.jpg' 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fm=jpg&fit=crop&w=800&q=75'
 Get-Media 'assets\img\cta-office.jpg' 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fm=jpg&fit=crop&w=1800&q=75'
-Write-Host 'Done. Photos are in assets\img.'
+# AI commercial photography replacements are generated & bundled in assets\img (WebP + AVIF variants)
+Write-Host 'Done. All photos are bundled in assets\img.'
