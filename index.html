@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="only light" />
+  <meta name="supported-color-schemes" content="light" />
   <title>Lead Base Pro — B2B lead databases, built for the businesses you sell to</title>
-  <meta name="description" content="Lead Base Pro builds ready-to-use B2B lead databases — business name, phone, address, website and category — for teams that sell to hotels and hundreds of other industries. One-time packages from ₹3,750. Halasuru, Hoysala Nagar, Bengaluru. Call: +91 63633 27097." />
+  <meta name="description" content="Lead Base Pro builds ready-to-use B2B lead databases — business name, phone, address, website and category — for teams that sell to hotels and hundreds of other industries. One-time packages from ₹3,750. Halasuru, Bengaluru." />
   <meta name="theme-color" content="#0C0E12" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,14 +67,15 @@
       <a href="#faq">FAQ</a>
     </nav>
     <a href="#contact" class="pill pill--dark header__cta" data-magnetic><span>Get your database</span></a>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
   </header>
-  <div class="drawer" id="drawer">
-    <a href="#records">The data</a><a href="#process">Process</a><a href="#industries">Industries</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Get your database</a>
-    <a href="tel:+916363327097" style="margin-top:24px; font-size:clamp(20px, 5vw, 30px); color:var(--signal); display:flex; align-items:center; gap:10px;">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      63633 27097
-    </a>
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <a href="#records">The data</a>
+    <a href="#process">Process</a>
+    <a href="#industries">Industries</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="drawer__cta">Get your database</a>
   </div>
 
   <main id="top">
@@ -80,7 +83,6 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="hero">
       <div class="hero__inner">
-        <p class="hero__kicker reveal-up"><span class="live"></span>B2B lead databases · Halasuru, Bengaluru · <a href="tel:+916363327097" style="color:inherit; font-weight:600;">63633 27097</a></p>
         <h1 class="hero__title">
           <span class="row"><span class="split">Find businesses.</span></span>
           <span class="row"><span class="split">Reach decision&#8209;makers.</span></span>
@@ -98,10 +100,10 @@
       <!-- 3D deck of real photos -->
       <div class="deck" id="deck" aria-hidden="true">
         <div class="deck__stage" id="deckStage">
-          <div class="deck__card" data-i="0"><img src="assets/img/hero-resort.jpg" data-cdn="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=75" alt="Resort hotel with pool" decoding="async" fetchpriority="high" /><span class="deck__tag">Resorts</span></div>
-          <div class="deck__card" data-i="1"><img src="assets/img/hero-hotel.jpg" data-cdn="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=75" alt="Hotel exterior at dusk" decoding="async" /><span class="deck__tag">Hotels</span></div>
-          <div class="deck__card" data-i="2"><img src="assets/img/hero-restaurant.jpg" data-cdn="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=75" alt="Restaurant interior" decoding="async" /><span class="deck__tag">Restaurants</span></div>
-          <div class="deck__card" data-i="3"><img src="assets/img/hero-lobby.jpg" data-cdn="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=75" alt="Hotel reception lobby" decoding="async" /><span class="deck__tag">Boutique hotels</span></div>
+          <div class="deck__card" data-i="0"><img src="assets/img/hero-resort.jpg" data-cdn="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=75" alt="Resort hotel with pool" width="1000" height="1250" decoding="async" fetchpriority="high" /><span class="deck__tag">Resorts</span></div>
+          <div class="deck__card" data-i="1"><img src="assets/img/hero-hotel.jpg" data-cdn="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=75" alt="Hotel exterior at dusk" width="1000" height="1250" decoding="async" /><span class="deck__tag">Hotels</span></div>
+          <div class="deck__card" data-i="2"><img src="assets/img/hero-restaurant.jpg" data-cdn="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=75" alt="Restaurant interior" width="1000" height="1250" decoding="async" /><span class="deck__tag">Restaurants</span></div>
+          <div class="deck__card" data-i="3"><img src="assets/img/hero-lobby.jpg" data-cdn="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=75" alt="Hotel reception lobby" width="1000" height="1250" decoding="async" /><span class="deck__tag">Boutique hotels</span></div>
         </div>
       </div>
       <div class="hero__scroll"><span>Scroll</span><i></i></div>
@@ -112,7 +114,7 @@
       <div class="wrap statement__grid">
         <p class="label">01 — Why Lead Base Pro</p>
         <p class="statement__text fill-text">We're not selling phone numbers. We build a structured database of businesses that are ready to buy from you — so your team spends the day pitching and converting, not researching.</p>
-        <figure class="statement__photo clip-reveal"><img src="assets/img/intro-team.jpg" data-cdn="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=75" alt="Sales team working together" loading="lazy" decoding="async" /></figure>
+        <figure class="statement__photo clip-reveal"><img src="assets/img/intro-team.jpg" data-cdn="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=75" alt="Sales team working together" width="1200" height="900" loading="lazy" decoding="async" /></figure>
         <div class="statement__facts">
           <div><b class="count" data-to="3750" data-prefix="₹">0</b><span>entry package, one-time</span></div>
           <div><b class="count" data-to="3000">0</b><span>genuine leads minimum, even on the starter pack</span></div>
@@ -126,32 +128,35 @@
       <div class="records__pin">
         <div class="records__head wrap">
           <p class="label">02 — What's in every record</p>
-          <h2 class="h2 split-lines">Six fields your team can dial, message and visit <em>on day one.</em></h2>
+          <div class="records__title-row">
+            <h2 class="h2 split-lines">Six fields your team can dial, message and visit <em>on day one.</em></h2>
+            <span class="rec__swipe" id="recSwipe" aria-hidden="true">Swipe →</span>
+          </div>
           <div class="records__progress"><i id="recProgress"></i></div>
         </div>
         <div class="records__track" id="recTrack">
           <article class="rec">
-            <figure><img src="assets/img/rec-name.jpg" data-cdn="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=75" alt="Hotel building facade" loading="lazy" decoding="async" /></figure>
+            <figure><img src="assets/img/rec-name.jpg" data-cdn="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=75" alt="Hotel building facade" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
             <div class="rec__body"><span class="rec__n">01</span><h3>Business name</h3><p>The hotel or business exactly as it trades, so your caller opens with confidence.</p></div>
           </article>
           <article class="rec">
-            <figure><img src="assets/img/rec-phone.jpg" data-cdn="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=75" alt="Professional on a phone call" loading="lazy" decoding="async" /></figure>
+            <figure><img src="assets/img/rec-phone.jpg" data-cdn="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=75" alt="Professional on a phone call" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
             <div class="rec__body"><span class="rec__n">02</span><h3>Contact number</h3><p>Ready for telecalling and WhatsApp outreach the moment the file lands.</p></div>
           </article>
           <article class="rec">
-            <figure><img src="assets/img/rec-location.jpg" data-cdn="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=75" alt="City skyline" loading="lazy" decoding="async" /></figure>
+            <figure><img src="assets/img/rec-location.jpg" data-cdn="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=75" alt="City skyline" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
             <div class="rec__body"><span class="rec__n">03</span><h3>Location &amp; address</h3><p>Plan territories, routes and field visits by area — street to state.</p></div>
           </article>
           <article class="rec">
-            <figure><img src="assets/img/rec-website.jpg" data-cdn="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=75" alt="Laptop with analytics" loading="lazy" decoding="async" /></figure>
+            <figure><img src="assets/img/rec-website.jpg" data-cdn="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=75" alt="Laptop with analytics" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
             <div class="rec__body"><span class="rec__n">04</span><h3>Website</h3><p>Read up on the prospect before you pitch and tailor your offer.</p></div>
           </article>
           <article class="rec">
-            <figure><img src="assets/img/rec-category.jpg" data-cdn="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=75" alt="Hotel room interior" loading="lazy" decoding="async" /></figure>
+            <figure><img src="assets/img/rec-category.jpg" data-cdn="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=75" alt="Hotel room interior" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
             <div class="rec__body"><span class="rec__n">05</span><h3>Category &amp; type</h3><p>Hotel, resort, guest house, restaurant — segment the list your way.</p></div>
           </article>
           <article class="rec">
-            <figure><img src="assets/img/rec-more.jpg" data-cdn="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=75" alt="Business dashboard on screen" loading="lazy" decoding="async" /></figure>
+            <figure><img src="assets/img/rec-more.jpg" data-cdn="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=75" alt="Business dashboard on screen" width="1000" height="1333" loading="lazy" decoding="async" /></figure>
             <div class="rec__body"><span class="rec__n">06</span><h3>Everything else we find</h3><p>Any other available business information comes included at no extra cost.</p></div>
           </article>
         </div>
@@ -167,7 +172,7 @@
         </div>
         <div class="flip__stage">
           <div class="flip__card" id="flipCard">
-            <div class="flip__face flip__front"><img src="assets/img/flip-hotel.jpg" data-cdn="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=75" alt="Hotel corridor" loading="lazy" decoding="async" /><span class="flip__hint">A hotel in Bengaluru</span></div>
+            <div class="flip__face flip__front"><img src="assets/img/flip-hotel.jpg" data-cdn="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=75" alt="Hotel corridor" width="1200" height="1500" loading="lazy" decoding="async" /><span class="flip__hint">A hotel in Bengaluru</span></div>
             <div class="flip__face flip__back">
               <p class="flip__eyebrow">Sample record · illustrative</p>
               <dl>
@@ -189,20 +194,48 @@
       <div class="wrap process__grid">
         <div class="process__media">
           <div class="process__frame">
-            <figure class="pimg is-on" data-step="0"><img src="assets/img/step-product.jpg" data-cdn="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=75" alt="Commercial kitchen" loading="lazy" decoding="async" /></figure>
-            <figure class="pimg" data-step="1"><img src="assets/img/step-market.jpg" data-cdn="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1100&q=75" alt="City at night" loading="lazy" decoding="async" /></figure>
-            <figure class="pimg" data-step="2"><img src="assets/img/step-collect.jpg" data-cdn="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=75" alt="Server room" loading="lazy" decoding="async" /></figure>
-            <figure class="pimg" data-step="3"><img src="assets/img/step-sell.jpg" data-cdn="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1100&q=75" alt="Business handshake" loading="lazy" decoding="async" /></figure>
+            <figure class="pimg is-on" data-step="0"><img src="assets/img/step-product.jpg" data-cdn="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=75" alt="Commercial kitchen" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            <figure class="pimg" data-step="1"><img src="assets/img/step-market.jpg" data-cdn="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1100&q=75" alt="City at night" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            <figure class="pimg" data-step="2"><img src="assets/img/step-collect.jpg" data-cdn="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=75" alt="Server room" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            <figure class="pimg" data-step="3"><img src="assets/img/step-sell.jpg" data-cdn="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1100&q=75" alt="Business handshake" width="1100" height="733" loading="lazy" decoding="async" /></figure>
             <span class="process__num" id="stepNum">01</span>
           </div>
         </div>
         <div class="process__steps">
           <p class="label">04 — How it works</p>
           <h2 class="h2 split-lines">From your brief to a <em>ready database.</em></h2>
-          <article class="pstep" data-step="0"><span>01</span><h3>Tell us what you sell</h3><p>Linen, kitchen equipment, toiletries, furniture, software — we start with your product and work out exactly who buys it.</p></article>
-          <article class="pstep" data-step="1"><span>02</span><h3>Pick your market</h3><p>Target businesses across Bengaluru, all of Karnataka, or anywhere in India — and tell us how many contacts you want to start with.</p></article>
-          <article class="pstep" data-step="2"><span>03</span><h3>We collect and structure</h3><p>Our team gathers matching businesses and organises every record into clean, consistent columns.</p></article>
-          <article class="pstep" data-step="3"><span>04</span><h3>You start selling</h3><p>Load it into telecalling, WhatsApp, email campaigns or field visits. Your team works the leads; we've done the research.</p></article>
+          <article class="pstep" data-step="0">
+            <span>01</span>
+            <div class="pstep__body">
+              <h3>Tell us what you sell</h3>
+              <p>Linen, kitchen equipment, toiletries, furniture, software — we start with your product and work out exactly who buys it.</p>
+              <figure class="pstep__media"><img src="assets/img/step-product.jpg" data-cdn="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=75" alt="Commercial kitchen" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            </div>
+          </article>
+          <article class="pstep" data-step="1">
+            <span>02</span>
+            <div class="pstep__body">
+              <h3>Pick your market</h3>
+              <p>Target businesses across Bengaluru, all of Karnataka, or anywhere in India — and tell us how many contacts you want to start with.</p>
+              <figure class="pstep__media"><img src="assets/img/step-market.jpg" data-cdn="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1100&q=75" alt="City at night" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            </div>
+          </article>
+          <article class="pstep" data-step="2">
+            <span>03</span>
+            <div class="pstep__body">
+              <h3>We collect and structure</h3>
+              <p>Our team gathers matching businesses and organises every record into clean, consistent columns.</p>
+              <figure class="pstep__media"><img src="assets/img/step-collect.jpg" data-cdn="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=75" alt="Server room" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            </div>
+          </article>
+          <article class="pstep" data-step="3">
+            <span>04</span>
+            <div class="pstep__body">
+              <h3>You start selling</h3>
+              <p>Load it into telecalling, WhatsApp, email campaigns or field visits. Your team works the leads; we've done the research.</p>
+              <figure class="pstep__media"><img src="assets/img/step-sell.jpg" data-cdn="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1100&q=75" alt="Business handshake" width="1100" height="733" loading="lazy" decoding="async" /></figure>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -215,16 +248,16 @@
           <h2 class="h2 split-lines">Tell us what you sell. We'll find <em>who buys it.</em></h2>
         </div>
         <ul class="ind" id="indList">
-          <li class="ind__row" data-img="ind-linen"><span class="ind__you">Hotel linen suppliers</span><span class="ind__to">Hotels, resorts, serviced apartments</span><figure class="ind__thumb"><img src="assets/img/ind-linen.jpg" data-cdn="https://images.unsplash.com/photo-1631049035182-249067d7618e?auto=format&fit=crop&w=700&q=75" alt="Fresh hotel linen" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-kitchen"><span class="ind__you">Commercial kitchen equipment</span><span class="ind__to">Hotels, restaurants, cloud kitchens</span><figure class="ind__thumb"><img src="assets/img/ind-kitchen.jpg" data-cdn="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=75" alt="Chef in a commercial kitchen" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-housekeeping"><span class="ind__you">Housekeeping supplies</span><span class="ind__to">Hotels, resorts, hospitality businesses</span><figure class="ind__thumb"><img src="assets/img/ind-housekeeping.jpg" data-cdn="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=700&q=75" alt="Made-up hotel room" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-furniture"><span class="ind__you">Hotel furniture manufacturers</span><span class="ind__to">Hotels, resorts, boutique hotels</span><figure class="ind__thumb"><img src="assets/img/ind-furniture.jpg" data-cdn="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=75" alt="Hotel lounge furniture" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-toiletries"><span class="ind__you">Hotel toiletries suppliers</span><span class="ind__to">Hotels, resorts, guest houses</span><figure class="ind__thumb"><img src="assets/img/ind-toiletries.jpg" data-cdn="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=700&q=75" alt="Bathroom toiletries" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-food"><span class="ind__you">Food distributors</span><span class="ind__to">Hotels, restaurants, catering businesses</span><figure class="ind__thumb"><img src="assets/img/ind-food.jpg" data-cdn="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=75" alt="Busy restaurant" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-laundry"><span class="ind__you">Laundry equipment suppliers</span><span class="ind__to">Hotels, hospitals, commercial laundries</span><figure class="ind__thumb"><img src="assets/img/ind-laundry.jpg" data-cdn="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=700&q=75" alt="Commercial laundry machines" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-cctv"><span class="ind__you">CCTV &amp; security providers</span><span class="ind__to">Hotels, resorts, commercial properties</span><figure class="ind__thumb"><img src="assets/img/ind-cctv.jpg" data-cdn="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=700&q=75" alt="Security camera" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-interior"><span class="ind__you">Interior designers</span><span class="ind__to">Hotels, restaurants, hospitality projects</span><figure class="ind__thumb"><img src="assets/img/ind-interior.jpg" data-cdn="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=75" alt="Designed interior" loading="lazy" decoding="async" /></figure></li>
-          <li class="ind__row" data-img="ind-software"><span class="ind__you">Hotel software providers</span><span class="ind__to">Hotels, resorts, hospitality groups</span><figure class="ind__thumb"><img src="assets/img/ind-software.jpg" data-cdn="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=700&q=75" alt="Software on a phone and laptop" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-linen"><span class="ind__you">Hotel linen suppliers</span><span class="ind__to">Hotels, resorts, serviced apartments</span><figure class="ind__thumb"><img src="assets/img/ind-linen.jpg" data-cdn="https://images.unsplash.com/photo-1631049035182-249067d7618e?auto=format&fit=crop&w=700&q=75" alt="Fresh hotel linen" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-kitchen"><span class="ind__you">Commercial kitchen equipment</span><span class="ind__to">Hotels, restaurants, cloud kitchens</span><figure class="ind__thumb"><img src="assets/img/ind-kitchen.jpg" data-cdn="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=75" alt="Chef in a commercial kitchen" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-housekeeping"><span class="ind__you">Housekeeping supplies</span><span class="ind__to">Hotels, resorts, hospitality businesses</span><figure class="ind__thumb"><img src="assets/img/ind-housekeeping.jpg" data-cdn="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=700&q=75" alt="Made-up hotel room" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-furniture"><span class="ind__you">Hotel furniture manufacturers</span><span class="ind__to">Hotels, resorts, boutique hotels</span><figure class="ind__thumb"><img src="assets/img/ind-furniture.jpg" data-cdn="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=75" alt="Hotel lounge furniture" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-toiletries"><span class="ind__you">Hotel toiletries suppliers</span><span class="ind__to">Hotels, resorts, guest houses</span><figure class="ind__thumb"><img src="assets/img/ind-toiletries.jpg" data-cdn="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=700&q=75" alt="Bathroom toiletries" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-food"><span class="ind__you">Food distributors</span><span class="ind__to">Hotels, restaurants, catering businesses</span><figure class="ind__thumb"><img src="assets/img/ind-food.jpg" data-cdn="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=75" alt="Busy restaurant" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-laundry"><span class="ind__you">Laundry equipment suppliers</span><span class="ind__to">Hotels, hospitals, commercial laundries</span><figure class="ind__thumb"><img src="assets/img/ind-laundry.jpg" data-cdn="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=700&q=75" alt="Commercial laundry machines" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-cctv"><span class="ind__you">CCTV &amp; security providers</span><span class="ind__to">Hotels, resorts, commercial properties</span><figure class="ind__thumb"><img src="assets/img/ind-cctv.jpg" data-cdn="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=700&q=75" alt="Security camera" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-interior"><span class="ind__you">Interior designers</span><span class="ind__to">Hotels, restaurants, hospitality projects</span><figure class="ind__thumb"><img src="assets/img/ind-interior.jpg" data-cdn="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=75" alt="Designed interior" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
+          <li class="ind__row" data-img="ind-software"><span class="ind__you">Hotel software providers</span><span class="ind__to">Hotels, resorts, hospitality groups</span><figure class="ind__thumb"><img src="assets/img/ind-software.jpg" data-cdn="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=700&q=75" alt="Software on a phone and laptop" width="160" height="160" loading="lazy" decoding="async" /></figure></li>
         </ul>
         <div class="ind__float" id="indFloat" aria-hidden="true"></div>
       </div>
@@ -239,21 +272,21 @@
           <p class="pricing__sub">One-time packages priced by the number of leads you need. The larger the package, the lower your rate per lead. No mandatory monthly subscription.</p>
         </div>
         <div class="plans" id="plans">
-          <article class="plan">
+          <article class="plan plan--starter">
             <header><h3>Starter</h3><span>3,000 – 5,000 leads</span></header>
             <p class="plan__price"><small>₹</small>3,750</p>
             <p class="plan__rate">₹1.25 per lead</p>
             <ul><li>Up to 5,000 scraped records</li><li>Minimum 3,000 genuine leads</li><li>Your industry and location</li></ul>
             <a href="#contact" class="plan__btn" data-plan="Starter · 3,000–5,000">Choose Starter</a>
           </article>
-          <article class="plan">
+          <article class="plan plan--growth">
             <header><h3>Growth</h3><span>6,000 – 10,000 leads</span></header>
             <p class="plan__price"><small>₹</small>6,600</p>
             <p class="plan__rate">₹1.10 per lead</p>
             <ul><li>Wider market coverage</li><li>All available business fields</li><li>One-time payment</li></ul>
             <a href="#contact" class="plan__btn" data-plan="Growth · 6,000–10,000">Choose Growth</a>
           </article>
-          <article class="plan">
+          <article class="plan plan--scale">
             <header><h3>Scale</h3><span>15,000 – 25,000 leads</span></header>
             <p class="plan__price"><small>₹</small>15,000</p>
             <p class="plan__rate">₹1.00 per lead</p>
@@ -291,11 +324,11 @@
           <p>The same service works for hundreds of industries. Tell us who your buyers are — manufacturers, distributors, wholesalers, IT companies, schools and colleges, hospitals or real estate — and we'll build the list.</p>
         </div>
         <div class="gallery">
-          <figure class="g g1" data-speed="-8"><img src="assets/img/bey-warehouse.jpg" data-cdn="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=75" alt="Distribution warehouse" loading="lazy" decoding="async" /><figcaption>Distributors</figcaption></figure>
-          <figure class="g g2" data-speed="10"><img src="assets/img/bey-hospital.jpg" data-cdn="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=75" alt="Hospital corridor" loading="lazy" decoding="async" /><figcaption>Hospitals</figcaption></figure>
-          <figure class="g g3" data-speed="-4"><img src="assets/img/bey-realestate.jpg" data-cdn="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=75" alt="Modern property" loading="lazy" decoding="async" /><figcaption>Real estate</figcaption></figure>
-          <figure class="g g4" data-speed="14"><img src="assets/img/bey-factory.jpg" data-cdn="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=75" alt="Engineer in a factory" loading="lazy" decoding="async" /><figcaption>Manufacturers</figcaption></figure>
-          <figure class="g g5" data-speed="-12"><img src="assets/img/bey-office.jpg" data-cdn="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=75" alt="Modern office" loading="lazy" decoding="async" /><figcaption>IT companies</figcaption></figure>
+          <figure class="g g1" data-speed="-8"><img src="assets/img/bey-warehouse.jpg" data-cdn="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=75" alt="Distribution warehouse" width="800" height="1000" loading="lazy" decoding="async" /><figcaption>Distributors</figcaption></figure>
+          <figure class="g g2" data-speed="10"><img src="assets/img/bey-hospital.jpg" data-cdn="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=75" alt="Hospital corridor" width="800" height="800" loading="lazy" decoding="async" /><figcaption>Hospitals</figcaption></figure>
+          <figure class="g g3" data-speed="-4"><img src="assets/img/bey-realestate.jpg" data-cdn="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=75" alt="Modern property" width="800" height="1000" loading="lazy" decoding="async" /><figcaption>Real estate</figcaption></figure>
+          <figure class="g g4" data-speed="14"><img src="assets/img/bey-factory.jpg" data-cdn="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=75" alt="Engineer in a factory" width="800" height="600" loading="lazy" decoding="async" /><figcaption>Manufacturers</figcaption></figure>
+          <figure class="g g5" data-speed="-12"><img src="assets/img/bey-office.jpg" data-cdn="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=75" alt="Modern office" width="800" height="800" loading="lazy" decoding="async" /><figcaption>IT companies</figcaption></figure>
         </div>
       </div>
     </section>
@@ -320,30 +353,61 @@
 
     <!-- ================= CONTACT (circle reveal) ================= -->
     <section class="contact" id="contact">
-      <div class="contact__bg" id="contactBg"><img src="assets/img/cta-office.jpg" data-cdn="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1800&q=75" alt="Bright modern office" loading="lazy" decoding="async" /></div>
+      <div class="contact__bg" id="contactBg"><img src="assets/img/cta-office.jpg" data-cdn="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1800&q=75" alt="Bright modern office" width="1800" height="1200" loading="lazy" decoding="async" /></div>
       <div class="wrap contact__grid">
         <div class="contact__copy">
           <p class="label label--light">09 — Start</p>
           <h2 class="h2">Tell us who you want to reach. <em>We'll build the list.</em></h2>
           <p>Share your business and target market. We'll suggest the right database, explain the deliverables and get it prepared for you.</p>
           <div class="contact__addr">
-            <strong style="color:var(--bone); display:block; margin-bottom:4px; font-size:16px;">Akshara Enterprises</strong>
-            <p style="margin:0 0 8px 0; color:rgba(238,234,226,.75); line-height:1.5;">Halasuru, Hoysala Nagar, Ward Number 80,<br />Bengaluru, Karnataka 560008</p>
-            <a href="tel:+916363327097" class="contact__phone">
+            <strong class="contact__company">Lead Base Pro</strong>
+            <p class="contact__addr-line">Halasuru, Hoysala Nagar, Ward Number 80,<br />Bengaluru, Karnataka 560008</p>
+            <a href="tel:+917019576635" class="contact__phone">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>+91 63633 27097</span>
+              <span>+91 70195 76635</span>
             </a>
           </div>
         </div>
         <form class="form" id="leadForm" novalidate>
-          <label class="f"><span>Your name</span><input name="name" required autocomplete="name" /></label>
-          <label class="f"><span>Company</span><input name="company" required autocomplete="organization" /></label>
-          <label class="f"><span>Phone</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+91" /></label>
-          <label class="f"><span>What do you sell?</span><select name="business" id="bizSelect" required><option value="" selected disabled>Choose one</option></select></label>
-          <fieldset class="f f--seg"><span>Target market</span>
-            <div class="seg"><label><input type="radio" name="market" value="Bengaluru" checked /><b>Bengaluru</b></label><label><input type="radio" name="market" value="Karnataka" /><b>Karnataka</b></label><label><input type="radio" name="market" value="All India" /><b>All India</b></label></div>
+          <label class="f">
+            <span>Your name</span>
+            <input name="name" required autocomplete="name" />
+            <span class="f__err">Please enter your name</span>
+          </label>
+          <label class="f">
+            <span>Company</span>
+            <input name="company" required autocomplete="organization" />
+            <span class="f__err">Please enter your company</span>
+          </label>
+          <label class="f">
+            <span>Phone</span>
+            <input name="phone" type="tel" inputmode="tel" required autocomplete="tel" placeholder="+91 70195 76635" pattern="[0-9+\s-]{10,}" />
+            <span class="f__err">Please enter a valid phone number (at least 10 digits)</span>
+          </label>
+          <label class="f">
+            <span>What do you sell?</span>
+            <select name="business" id="bizSelect" required><option value="" selected disabled>Choose one</option></select>
+            <span class="f__err">Please select what you sell</span>
+          </label>
+          <fieldset class="f f--seg">
+            <span>Target market</span>
+            <div class="seg">
+              <label><input type="radio" name="market" value="Bengaluru" checked /><b>Bengaluru</b></label>
+              <label><input type="radio" name="market" value="Karnataka" /><b>Karnataka</b></label>
+              <label><input type="radio" name="market" value="All India" /><b>All India</b></label>
+            </div>
           </fieldset>
-          <label class="f f--full"><span>Package</span><select name="package" id="pkgSelect"><option>Starter · 3,000–5,000</option><option>Growth · 6,000–10,000</option><option>Scale · 15,000–25,000</option><option>Pro · 30,000–50,000</option><option>Enterprise · 60,000–1,00,000</option><option>Not sure — help me choose</option></select></label>
+          <label class="f f--full">
+            <span>Package</span>
+            <select name="package" id="pkgSelect">
+              <option>Starter · 3,000–5,000</option>
+              <option>Growth · 6,000–10,000</option>
+              <option>Scale · 15,000–25,000</option>
+              <option>Pro · 30,000–50,000</option>
+              <option>Enterprise · 60,000–1,00,000</option>
+              <option>Not sure — help me choose</option>
+            </select>
+          </label>
           <button class="pill pill--signal pill--block" type="submit" data-magnetic><span>Request my database</span><i class="arrow"></i></button>
           <p class="form__ok" id="formOk" role="status" hidden>Thank you — our team will call you shortly to plan your database.</p>
         </form>
@@ -357,18 +421,24 @@
         <div class="footer__brand-info">
           <p>Industry-specific B2B lead databases for teams that would rather sell than search.</p>
           <div class="footer__addr-block">
-            <span class="footer__company">Akshara Enterprises</span>
+            <span class="footer__company">Lead Base Pro</span>
             <address class="footer__addr-text">Halasuru, Hoysala Nagar, Ward Number 80, Bengaluru, Karnataka 560008</address>
-            <a href="tel:+916363327097" class="footer__phone-link">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>+91 63633 27097</span>
-            </a>
           </div>
         </div>
-        <nav><a href="#records">The data</a><a href="#process">Process</a><a href="#industries">Industries</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+        <nav aria-label="Footer Navigation">
+          <a href="#records">The data</a>
+          <a href="#process">Process</a>
+          <a href="#industries">Industries</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
       <div class="footer__word" aria-hidden="true"><span>Lead</span><span>Base</span><em>Pro</em></div>
-      <div class="footer__bottom"><span>© <span id="yr">2026</span> Lead Base Pro · an Akshara Enterprises service · Halasuru, Hoysala Nagar, Ward Number 80, Bengaluru, Karnataka 560008</span><a href="#top" id="toTop">Back to top ↑</a></div>
+      <div class="footer__bottom">
+        <span>© <span id="yr">2026</span> Lead Base Pro · Halasuru, Bengaluru · <a href="tel:+917019576635" class="footer__tel">+91 70195 76635</a></span>
+        <a href="#top" id="toTop">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 

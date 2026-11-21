@@ -1,6 +1,6 @@
 # Lead Base Pro
 
-B2B lead database service website for Akshara Enterprises, Halasuru, Hoysala Nagar, Bengaluru. Contact: +91 63633 27097.
+B2B lead database service website. Halasuru, Bengaluru. Contact: +91 70195 76635.
 
 **Palette (60·30·10):** Bone `#EEEAE2` · Ink `#0C0E12` · Signal orange `#FF5B1F`
 **Type:** Archivo (expanded display) · Inter Tight (text) · Fraunces italic (accents)

@@ -5,9 +5,13 @@ Set-Location $PSScriptRoot
 New-Item -ItemType Directory -Force -Path 'assets\img' | Out-Null
 function Get-Media($out, $url) { if ((Test-Path $out) -and (Get-Item $out).Length -gt 10000) { "SKIP $out"; return }; try { Invoke-WebRequest -Uri $url -OutFile $out -UseBasicParsing -TimeoutSec 120; "OK   $out $((Get-Item $out).Length)" } catch { "FAIL $out $($_.Exception.Message)" } }
 Get-Media 'assets\img\hero-resort.jpg' 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fm=jpg&fit=crop&w=1400&q=75'
+Get-Media 'assets\img\hero-resort-sm.jpg' 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fm=jpg&fit=crop&w=600&q=75'
 Get-Media 'assets\img\hero-hotel.jpg' 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fm=jpg&fit=crop&w=1000&q=75'
+Get-Media 'assets\img\hero-hotel-sm.jpg' 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fm=jpg&fit=crop&w=600&q=75'
 Get-Media 'assets\img\hero-restaurant.jpg' 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fm=jpg&fit=crop&w=1000&q=75'
+Get-Media 'assets\img\hero-restaurant-sm.jpg' 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fm=jpg&fit=crop&w=600&q=75'
 Get-Media 'assets\img\hero-lobby.jpg' 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fm=jpg&fit=crop&w=1000&q=75'
+Get-Media 'assets\img\hero-lobby-sm.jpg' 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fm=jpg&fit=crop&w=600&q=75'
 Get-Media 'assets\img\intro-team.jpg' 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fm=jpg&fit=crop&w=1200&q=75'
 Get-Media 'assets\img\rec-name.jpg' 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fm=jpg&fit=crop&w=1000&q=75'
 Get-Media 'assets\img\rec-phone.jpg' 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fm=jpg&fit=crop&w=1000&q=75'
