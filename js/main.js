@@ -204,8 +204,8 @@
           onUpdate: s => gsap.set('#recProgress', { width: s.progress * 100 + '%' }) }
       });
       $$('.rec').forEach(r => {
-        gsap.fromTo(r, { rotationY: -38, z: -200, opacity: .35, transformPerspective: 1200, transformOrigin: '0% 50%' },
-          { rotationY: 0, z: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: r, containerAnimation: h, start: 'left 100%', end: 'left 45%', scrub: true } });
+        gsap.fromTo(r, { rotationY: -20, z: -100, opacity: .7, transformPerspective: 1200, transformOrigin: '0% 50%' },
+          { rotationY: 0, z: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: r, containerAnimation: h, start: 'left 100%', end: 'left 60%', scrub: true } });
         gsap.fromTo($('img', r), { xPercent: -8 }, { xPercent: 8, ease: 'none', scrollTrigger: { trigger: r, containerAnimation: h, start: 'left right', end: 'right left', scrub: true } });
       });
     });
